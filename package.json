@@ -1,0 +1,18 @@
+{
+  "name": "wjaapcn",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": {
+    "name": "KimPra2989",
+    "email": "dustmqaksdltkfrlfdldi@gmail.com",
+    "url": "https://github.com/KimPra2989"
+  },
+  "bin": {
+    "wjaapcn": "index.js"
+  },
+  "type": "module",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.3.0"
+  }
+}
