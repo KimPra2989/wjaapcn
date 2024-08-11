@@ -7,6 +7,7 @@
     "email": "dustmqaksdltkfrlfdldi@gmail.com",
     "url": "https://github.com/KimPra2989"
   },
+  "repository": "github:KimPra2989/wjaapcn",
   "bin": "index.js",
   "type": "module",
   "license": "MIT",
