@@ -4,6 +4,7 @@ import chalk from 'chalk'
 import inquirer from 'inquirer'
 import boxen from 'boxen'
 import { CHINESE, JAPANESE, KOREAN } from './menu/index.js'
+import randomPick from './utils/random-picker.js'
 
 async function recommendMenu() {
   const { cuisine } = await inquirer.prompt([
@@ -20,18 +21,17 @@ async function recommendMenu() {
     },
   ])
 
-  let menu
-  if (cuisine === 'korean') {
-    menu = KOREAN
-  } else if (cuisine === 'chinese') {
-    menu = CHINESE
-  } else if (cuisine === 'japanese') {
-    menu = JAPANESE
-  } else {
-    menu = [...KOREAN, ...CHINESE, ...JAPANESE]
+  // 선택한 메뉴 객에를 가져옴
+  const menu_map = {
+    korean: KOREAN,
+    chinese: CHINESE,
+    japanese: JAPANESE,
+    all: [...KOREAN, ...CHINESE, ...JAPANESE, '알아서 쳐먹어'],
   }
 
-  const randomMenu = menu[Math.floor(Math.random() * menu.length)]
+  const menu = menu_map[cuisine]
+
+  const randomMenu = randomPick(menu)
 
   const message = chalk.yellow.bold(`${chalk.bold(randomMenu)}`)
 
