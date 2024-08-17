@@ -3,7 +3,7 @@
 import chalk from 'chalk'
 import inquirer from 'inquirer'
 import boxen from 'boxen'
-import { CHINESE, JAPANESE, KOREAN, SPECIAL, XY } from './menu/index.js'
+import { ETC, CHINESE, JAPANESE, KOREAN, SPECIAL, XY, WESTERN } from './menu/index.js'
 import randomPick from './utils/random-picker.js'
 
 async function recommendMenu() {
@@ -11,13 +11,14 @@ async function recommendMenu() {
     {
       type: 'list',
       name: 'cuisine',
-      message: chalk.bold.magenta('어떤 종류?'),
+      message: chalk.bold.gray('어떤 종류?'),
       choices: [
-        { name: chalk.red('한식'), value: 'korean' },
-        { name: chalk.green('중식'), value: 'chinese' },
+        { name: chalk.redBright('한식'), value: 'korean' },
+        { name: chalk.cyanBright('중식'), value: 'chinese' },
         { name: chalk.blue('일식'), value: 'japanese' },
-        { name: chalk.red('상남자'), value: 'xy' },
-        { name: chalk.yellow('아무거나'), value: 'all' },
+        { name: chalk.greenBright('양식'), value: 'western' },
+        { name: chalk.yellow('상남자'), value: 'xy' },
+        { name: chalk.magenta('아무거나'), value: 'all' },
       ],
     },
   ])
@@ -26,9 +27,10 @@ async function recommendMenu() {
   const menu_map = {
     korean: KOREAN,
     chinese: CHINESE,
+    western: WESTERN,
     japanese: JAPANESE,
     xy: XY,
-    all: [...KOREAN, ...CHINESE, ...JAPANESE, ...SPECIAL],
+    all: [...KOREAN, ...CHINESE, ...JAPANESE, ...WESTERN, ...SPECIAL, ...ETC],
   }
 
   const menu = menu_map[cuisine]
@@ -36,7 +38,6 @@ async function recommendMenu() {
   const randomMenu = randomPick(menu)
 
   const message = chalk.yellow.bold(`${chalk.bold(randomMenu)}`)
-
   console.log(boxen(message, { padding: 1, margin: 1, borderStyle: 'round', borderColor: 'green' }))
 
   // 피드백
