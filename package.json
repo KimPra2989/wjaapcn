@@ -1,6 +1,6 @@
 {
   "name": "wjaapcn",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "점심 메뉴 뭐 먹지?... 추천해드림",
   "main": "index.js",
   "scripts": {
