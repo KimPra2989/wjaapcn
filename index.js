@@ -3,7 +3,7 @@
 import chalk from 'chalk'
 import inquirer from 'inquirer'
 import boxen from 'boxen'
-import { CHINESE, JAPANESE, KOREAN } from './menu/index.js'
+import { CHINESE, JAPANESE, KOREAN, XY } from './menu/index.js'
 import randomPick from './utils/random-picker.js'
 
 async function recommendMenu() {
@@ -16,6 +16,7 @@ async function recommendMenu() {
         { name: chalk.red('한식'), value: 'korean' },
         { name: chalk.green('중식'), value: 'chinese' },
         { name: chalk.blue('일식'), value: 'japanese' },
+        { name: chalk.red('상남자'), value: 'xy' },
         { name: chalk.yellow('아무거나'), value: 'all' },
       ],
     },
@@ -26,6 +27,7 @@ async function recommendMenu() {
     korean: KOREAN,
     chinese: CHINESE,
     japanese: JAPANESE,
+    xy: XY,
     all: [...KOREAN, ...CHINESE, ...JAPANESE, '알아서 쳐먹어'],
   }
 
