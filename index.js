@@ -3,9 +3,7 @@
 import chalk from 'chalk'
 import inquirer from 'inquirer'
 import boxen from 'boxen'
-import { KOREAN } from './menu/korean.js'
-import { CHINESE } from './menu/chinese.js'
-import { JAPANESE } from './menu/japanese.js'
+import { CHINESE, JAPANESE, KOREAN } from './menu/index.js'
 
 async function recommendMenu() {
   const { cuisine } = await inquirer.prompt([
