@@ -34,11 +34,14 @@ async function recommendMenu() {
   }
 
   const menu = menu_map[cuisine]
+  const { name: randomMenu, probability } = randomPick(menu)
 
-  const randomMenu = randomPick(menu)
-
+  //메뉴
   const message = chalk.yellow.bold(`${chalk.bold(randomMenu)}`)
   console.log(boxen(message, { padding: 1, margin: 1, borderStyle: 'round', borderColor: 'green' }))
+
+  //확률
+  console.log(chalk.magenta('확률 : ' + probability + ' %'))
 
   // 피드백
   const feedBackLink = 'https://forms.gle/qgPCjDMQiNLEPQ9fA'

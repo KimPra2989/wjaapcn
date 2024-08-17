@@ -6,7 +6,7 @@ const randomPick = (arr) => {
   const TOTAL = CSum.at(-1)
   const picked = Math.floor(Math.random() * TOTAL) + 1
   const idx = CSum.findIndex((x) => x >= picked)
-  return arr[idx].name
+  return { name: arr[idx].name, probability: (arr[idx].weight / TOTAL * 100).toFixed(2) }
 }
 
 export default randomPick
