@@ -36,6 +36,10 @@ async function recommendMenu() {
   const message = chalk.yellow.bold(`${chalk.bold(randomMenu)}`)
 
   console.log(boxen(message, { padding: 1, margin: 1, borderStyle: 'round', borderColor: 'green' }))
+
+  // 피드백
+  const feedBackLink = 'https://forms.gle/qgPCjDMQiNLEPQ9fA'
+  console.log('Feedback here → ' + chalk.blueBright.underline(feedBackLink) + '\n')
 }
 
 recommendMenu()
