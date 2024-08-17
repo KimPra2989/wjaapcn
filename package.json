@@ -3,6 +3,19 @@
   "version": "1.1.1",
   "description": "점심 메뉴 뭐 먹지?... 추천해드림",
   "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "점메추",
+    "점심",
+    "뭐먹지",
+    "메뉴",
+    "추천",
+    "lunch",
+    "menu",
+    "recommendation"
+  ],
   "author": {
     "name": "KimPra2989",
     "email": "dustmqaksdltkfrlfdldi@gmail.com",
@@ -12,9 +25,6 @@
   "bin": "index.js",
   "type": "module",
   "license": "MIT",
-  "scripts": {
-    "start": "node index.js"
-  },
   "dependencies": {
     "boxen": "^8.0.1",
     "chalk": "^5.3.0",
