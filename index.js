@@ -33,7 +33,7 @@ async function recommendMenu() {
 
   const randomMenu = menu[Math.floor(Math.random() * menu.length)]
 
-  const message = chalk.yellow.bold(`${chalk.bold(randomMenu)}\n`)
+  const message = chalk.yellow.bold(`${chalk.bold(randomMenu)}`)
 
   console.log(boxen(message, { padding: 1, margin: 1, borderStyle: 'round', borderColor: 'green' }))
 }
