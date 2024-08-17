@@ -3,7 +3,7 @@
 import chalk from 'chalk'
 import inquirer from 'inquirer'
 import boxen from 'boxen'
-import { CHINESE, JAPANESE, KOREAN, XY } from './menu/index.js'
+import { CHINESE, JAPANESE, KOREAN, SPECIAL, XY } from './menu/index.js'
 import randomPick from './utils/random-picker.js'
 
 async function recommendMenu() {
@@ -28,7 +28,7 @@ async function recommendMenu() {
     chinese: CHINESE,
     japanese: JAPANESE,
     xy: XY,
-    all: [...KOREAN, ...CHINESE, ...JAPANESE, '알아서 쳐먹어'],
+    all: [...KOREAN, ...CHINESE, ...JAPANESE, ...SPECIAL],
   }
 
   const menu = menu_map[cuisine]
