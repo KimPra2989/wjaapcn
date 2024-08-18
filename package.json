@@ -1,6 +1,6 @@
 {
   "name": "wjaapcn",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "오늘 점심 뭐 먹지?... 추천해드림",
   "main": "dist/index.js",
   "exports": {
