@@ -1,10 +1,20 @@
 {
   "name": "wjaapcn",
   "version": "1.2.1",
-  "description": "점심 메뉴 뭐 먹지?... 추천해드림",
-  "main": "index.js",
+  "description": "오늘 점심 뭐 먹지?... 추천해드림",
+  "main": "dist/index.js",
+  "exports": {
+    "import": "./dist/index.js"
+  },
+  "files": [
+    "dist/**/*"
+  ],
   "scripts": {
-    "start": "node index.js"
+    "start": "node dist/index.js",
+    "build": "yarn clean && yarn build:ts",
+    "build:ts": "tsc",
+    "clean": "rimraf dist",
+    "clean:nm": "rimraf node_modules"
   },
   "keywords": [
     "점메추",
@@ -22,15 +32,17 @@
     "url": "https://github.com/KimPra2989"
   },
   "repository": "github:KimPra2989/wjaapcn",
-  "bin": "index.js",
+  "bin": "dist/index.js",
   "type": "module",
   "license": "MIT",
   "dependencies": {
+    "@types/node": "^22.4.0",
     "boxen": "^8.0.1",
     "chalk": "^5.3.0",
     "inquirer": "^10.1.8"
   },
   "devDependencies": {
-    "prettier": "^3.3.3"
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4"
   }
 }

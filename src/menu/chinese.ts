@@ -1,4 +1,6 @@
-const CHINESE = [
+import { Menu } from '../types'
+
+const CHINESE: Menu[] = [
   { name: '마라탕', weight: 95 },
   { name: '짜장면', weight: 95 },
   { name: '짬뽕', weight: 94 },
@@ -18,6 +20,6 @@ const CHINESE = [
   { name: '유산슬', weight: 76 },
   { name: '깐풍새우', weight: 66 },
   { name: '잡채밥', weight: 57 },
-]
+] 
 
 export default CHINESE

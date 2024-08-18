@@ -1,4 +1,6 @@
-const KOREAN = [
+import { Menu } from '../types'
+
+const KOREAN: Menu[] = [
   { name: '불고기', weight: 94 },
   { name: '김치찌개', weight: 93 },
   { name: '된장찌개', weight: 92 },

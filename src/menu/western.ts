@@ -1,4 +1,6 @@
-const WESTERN = [
+import { Menu } from '../types'
+
+const WESTERN: Menu[] = [
   { name: '파스타', weight: 95 },
   { name: '피자', weight: 94 },
   { name: '햄버거', weight: 93 },

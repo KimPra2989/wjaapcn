@@ -1,0 +1,12 @@
+# 디렉토리 및 파일을 제외합니다.
+node_modules
+src
+*.ts
+*.map
+*.log
+*.md
+*.git
+.vscode
+dist/*.ts
+dist/*.map
+!README.md

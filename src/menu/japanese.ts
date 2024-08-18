@@ -1,4 +1,6 @@
-const JAPANESE = [
+import { Menu } from '../types'
+
+const JAPANESE: Menu[] = [
   { name: '스시', weight: 95 },
   { name: '라멘', weight: 94 },
   { name: '우동', weight: 93 },
